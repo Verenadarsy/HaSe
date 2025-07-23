@@ -3,7 +3,7 @@ name: Deploy to AWS EC2
 on:
   push:
     branches:
-      - master # Trigger deployment on
+      - master # Trigger deployment on 
 
 jobs:
   deploy:
@@ -21,7 +21,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@16.176.15.43 << 'EOF'
           cd /var/www/html/halal_certify
-          sudo git pull origin main
+          sudo git pull origin master
           # Restart Nginx or any other service if needed
           sudo systemctl restart nginx
           EOF
