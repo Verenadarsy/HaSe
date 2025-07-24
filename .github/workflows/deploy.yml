@@ -21,7 +21,7 @@ jobs:
       - name: Deploy to EC2
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@16.176.15.43 << 'EOF'
-          cd /var/www/html/halal_certify
+          cd /var/www/html/HaSe
           git pull origin master
           sudo systemctl restart nginx
           EOF
